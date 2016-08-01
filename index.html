@@ -3,16 +3,26 @@
     <title>Pretty Pomodoro</title>
     <link href='https://fonts.googleapis.com/css?family=Heebo:900,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="pomodoro">
       <!-- <h1 id="current-action"></h1> -->
-      <div id="timer">
-
+      <div id="timer-container">
+        <div id="timer-bg">
+          <div id="timer">
+            <div id="minutes">
+            </div>
+            <div id="separator">:</div>
+            <div id="seconds">
+            </div>
+          </div>
+        </div>
       </div>
       <div id="controls">
-        <!-- pause -->
-        <!-- restart -->
+        <a id="pause" href="#">Pause</a>
+        <a id="play" href="#">Play</a>
+        <a id="reset" href="#">Reset</a>
       </div>
       <div id="next">
         <h3>Next:</h3>

@@ -3,9 +3,28 @@ body {
   font-weight: 400;
   color: #cfcfcf
 }
-
+#timer-container {
+  height: 200px;
+  background-color: #333
+}
+#timer-bg {
+  background-color: lightgray;
+  height: 83px;
+  overflow:visible!important;
+  position:relative;
+  top: 36px;
+}
 #timer {
   color: #000;
+  background: #fff;
+  mix-blend-mode: lighten;
   font-weight: 900;
-  font-size: 200%
+  font-size: 700%;
+  height: 200px;
+  text-align:center;
+  position:relative;
+  top: -36px;
+}
+#timer div {
+  display: inline;
 }
