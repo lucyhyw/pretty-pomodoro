@@ -62,7 +62,7 @@ function initializeTimer(min) {
 
 }
 
-initializeTimer(25)
+initializeTimer(.5)
 
 var previousTime = 25
 
