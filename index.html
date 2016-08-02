@@ -1,54 +1,86 @@
 <html>
   <head>
     <title>Pretty Pomodoro</title>
-    <link href='https://fonts.googleapis.com/css?family=Heebo:900,400,700' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/acb5e33ee8.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <div id="pomodoro">
-      <!-- <h1 id="current-action"></h1> -->
-      <div id="timer-container">
-        <div id="timer-bg">
-          <div id="timer">
-            <div id="minutes">
-            </div>
-            <div id="separator">:</div>
-            <div id="seconds">
+    <div class="container">
+      <div id="pomodoro">
+        <!-- <h1 id="current-action"></h1> -->
+        <div id="timer-container">
+          <div id="timer-bg">
+            <div id="timer">
+              <div id="minutes">
+              </div>
+              <div id="separator">:</div>
+              <div id="seconds">
+              </div>
             </div>
           </div>
         </div>
+        <div id="controls">
+          <a href="#" id="pause"><i class="fa fa-pause"></i></a>
+          <a href="#" id="play" ><i class="fa fa-play"></i></a>
+          <a href="#" id="reset"><i class="fa fa-repeat"></i></a>
+        </div>
+        <div id="autopilot">
+          <h3>Next:</h3>
+          <h3 id="next-action"></h3>
+        </div>
       </div>
-      <div id="controls">
-        <a id="pause" href="#">Pause</a>
-        <a id="play" href="#">Play</a>
-        <a id="reset" href="#">Reset</a>
-      </div>
-      <div id="next">
-        <h3>Next:</h3>
-        <h3 id="next-action"></h3>
-      </div>
-    </div>
 
-    <div id="timers">
-      <div id="pomodoro-option" class="button">
-
+      <div id="timers">
+          <a id="pomodoro-option" class="button">
+            <div id="pomodoro-option-name">
+              Pomodoro
+            </div>
+            <div class="time" id="pomodoro-time">
+              25 min
+            </div>
+            <input type="text" class="edit-time" id="pomodoro-edit" name="pomodoro-edit" value="25">
+          </a>
+          <a id="short-break-option" class="button">
+            <div id="sb-option-name">
+              Short Break
+            </div>
+            <div class="time" id="sb-time">
+              5 min
+            </div>
+            <input type="text" class="edit-time" id="short-edit" name="short-edit" value="5">
+          </a>
+          <a id="long-break-option" class="button">
+            <div id="lb-option-name">
+              Long Break
+            </div>
+            <div class="time" id="lb-time">
+              15 min
+            </div>
+            <input type="text" class="edit-time" id="long-edit" name="long-edit" value="15">
+          </a>
+        <div style="clear:both;"></div>
+        <a id="done" class="button">
+          Done
+        </a>
       </div>
-      <div id="short-break-option" class="button">
-
+      <div id="options">
+        <a href="#"><i id="fullscreen" class="fa fa-arrows-alt"></i></a>
+        <a href="#"><i id="mute" class="fa fa-volume-off" style="width: 30px;"></i></a>
+        <a href="#"><i id="unmute" class="fa fa-volume-up" style="width: 30px;"></i></a>
+        <a href="#"><i id="edit" class="fa fa-pencil"></i></a>
+        <!-- autopilot -->
+        <!-- history -->
+        <!-- help -->
       </div>
-      <div id="long-break-option" class="button">
+      <ul id="history">
 
+      </ul>
+      <div id="footer">
+        Made by <a href="#">Lucy Wei</a>, powered by <a href="#"><i id="fullscreen" class="fa fa-pied-piper"></i></a>
       </div>
-    </div>
-    <div id="options">
-      <!-- fullscreen -->
-      <!-- edit -->
-      <!-- history -->
-      <!-- help -->
-    </div>
-    <div id="footer">
-      Made by <a href="#">Lucy Wei</a>
     </div>
     <script src="js/scripts.js" charset="utf-8"></script>
   </body>
