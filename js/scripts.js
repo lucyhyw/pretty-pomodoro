@@ -63,7 +63,9 @@ function initializeTimer(min) {
 
       if (t.total <= 0) {
         clearInterval(timeinterval)
-        var message, historyItem
+        var title = "Time's Up!"
+        var message
+        var historyItem
         if (min == pomodoro) {
           historyItem = {'type': 'Pomodoro'}
           message = "Your Pomodoro has finished!"
@@ -79,7 +81,10 @@ function initializeTimer(min) {
         }
         timerHistory.push(historyItem)
         $('#history').prepend($("<li>").text(historyItem.type))
-        var notification = new Notification(message);
+        var notification = new Notification(title, {
+          body: message,
+          icon: 'favicon.ico'
+        });
         if (!mute) {
           sound.play()
         }
@@ -115,7 +120,7 @@ function initializeTimer(min) {
   }, false)
 }
 
-initialTime = .5
+initialTime = pomodoro
 var previousTime = initialTime
 initializeTimer(initialTime)
 
