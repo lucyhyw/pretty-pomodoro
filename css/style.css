@@ -1,17 +1,22 @@
 body {
   font-family: Open Sans;
   font-weight: 400;
-  color: #cfcfcf;
+  color: #bbb;
   font-size: 1.5em;
-  padding:80px
+  padding:80px;
+  margin: 0;
 }
 a {
-  color: #ddd;
+  color: #ccc;
   text-decoration: none;
   transition: all .3s
 }
-a:hover {
-  color: #777
+#controls:hover a, #options:hover a, #footer:hover {
+  color: #999
+}
+
+a:hover, #controls a:hover, #options a:hover {
+  color: #444;
 }
 .container {
   text-align: center;
@@ -23,29 +28,49 @@ a:hover {
   height: 200px;
   background-color: #E66767;
   margin-bottom:50px;
+  position:relative;
 }
 #timer-bg {
-  background-color: #eee;
-  height: 4.2em;
+  height: 5.2em;
   overflow:visible!important;
-  position:relative;
-  top: 62px;
+  position:absolute;
+  top: 65px;
+  width: 80%;
+
+  /* wave stuff */
+  animation-name: wave;
+  animation-duration: 2500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="307" height="2000" viewBox="0 0 307 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#333" d="M0 0h307v2000c-64.47 0-90.563-25.623-153.5-25.623C90.565 1974.377 62.935 2000 0 2000V0z"/></svg>');
+  background-position:bottom left;
 }
+  @keyframes wave
+  {
+  	0% { transform:translatex(0px);  }
+    50% { transform:translatex(150px); ; }
+    100% { transform:translatex(300px); }
+  }
 #timer {
   color: #000;
   font-family: Rozha One;
   background: #fff;
   mix-blend-mode: lighten;
   font-weight: 400;
-  font-size: 6.67em;
+  font-size: 7.5em;
   height: 200px;
   text-align:center;
   position:relative;
-  top: -62px;
+  /*top: -125px;*/
 }
 #timer div {
   display: inline;
 }
+
+#controls {
+  display:inline-block;
+}
+
 
 #controls #pause, #timers a.button .time, .edit-time, #timers a#done, #unmute, #autopilot, #fullscreen-exit, #history {
   display: none;
@@ -93,5 +118,12 @@ a:hover {
 }
 
 #options {
-  padding: 50px
+  margin: 50px;
+  display: inline-block
+}
+
+#footer {
+  display: inline-block;
+  transition: all .3s;
+  font-size:.7em
 }

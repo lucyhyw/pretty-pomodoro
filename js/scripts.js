@@ -84,7 +84,7 @@ function initializeTimer(min) {
           sound.play()
         }
       }
-    var newHeight = (newTimeLeft / startTimeLeft) * 4.2
+    var newHeight = (newTimeLeft / startTimeLeft) *5.2
     // console.log(newTimeLeft / startTimeLeft)
     // plain js
     // var bg = document.getElementById('timer-bg').style.height = newHeight + "em"
@@ -92,7 +92,10 @@ function initializeTimer(min) {
     // pretty jquery?
     $('#timer-bg').animate({
       height: newHeight + "em"
-    }, 500)
+    }, 250)
+    $('#timer').animate({
+      //paddingTop: newHeight+ "em"
+    }, 250)
     }
   }
 

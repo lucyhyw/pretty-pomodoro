@@ -13,19 +13,20 @@
         <!-- <h1 id="current-action"></h1> -->
         <div id="timer-container">
           <div id="timer-bg">
-            <div id="timer">
-              <div id="minutes">
-              </div>
-              <div id="separator">:</div>
-              <div id="seconds">
-              </div>
+
+          </div>
+          <div id="timer">
+            <div id="minutes">
+            </div>
+            <div id="separator">:</div>
+            <div id="seconds">
             </div>
           </div>
         </div>
         <div id="controls">
-          <a href="#" id="pause"><i class="fa fa-pause"></i></a>
-          <a href="#" id="play" ><i class="fa fa-play"></i></a>
-          <a href="#" id="reset"><i class="fa fa-repeat"></i></a>
+          <a href="#" id="pause" title="Pause"><i class="fa fa-pause"></i></a>
+          <a href="#" id="play" title="Play"><i class="fa fa-play"></i></a>
+          <a href="#" id="reset" title="Reset"><i class="fa fa-repeat"></i></a>
         </div>
         <div id="autopilot">
           <h3>Next:</h3>
@@ -34,7 +35,7 @@
       </div>
 
       <div id="timers">
-          <a id="pomodoro-option" class="button">
+          <a id="pomodoro-option" class="button" title="Pomodoro">
             <div id="pomodoro-option-name">
               Pomodoro
             </div>
@@ -43,7 +44,7 @@
             </div>
             <input type="text" class="edit-time" id="pomodoro-edit" name="pomodoro-edit" value="25">
           </a>
-          <a id="short-break-option" class="button">
+          <a id="short-break-option" class="button" title="Short Break">
             <div id="sb-option-name">
               Short Break
             </div>
@@ -52,7 +53,7 @@
             </div>
             <input type="text" class="edit-time" id="short-edit" name="short-edit" value="5">
           </a>
-          <a id="long-break-option" class="button">
+          <a id="long-break-option" class="button" title="Long Break">
             <div id="lb-option-name">
               Long Break
             </div>
@@ -67,14 +68,15 @@
         </a>
       </div>
       <div id="options">
-        <a href="#"><i id="fullscreen" class="fa fa-arrows-alt"></i></a>
-        <a href="#"><i id="mute" class="fa fa-volume-off" style="width: 30px;"></i></a>
-        <a href="#"><i id="unmute" class="fa fa-volume-up" style="width: 30px;"></i></a>
-        <a href="#"><i id="edit" class="fa fa-pencil"></i></a>
+        <a href="#" title="Toggle Fullscreen"><i id="fullscreen" class="fa fa-arrows-alt"></i></a>
+        <a href="#" title="Mute"><i id="mute" class="fa fa-volume-off" style="width: 30px;"></i></a>
+        <a href="#" title="Unmute"><i id="unmute" class="fa fa-volume-up" style="width: 30px;"></i></a>
+        <a href="#" title="Edit"><i id="edit" class="fa fa-pencil"></i></a>
         <!-- autopilot -->
         <!-- history -->
         <!-- help -->
       </div>
+      <div style="clear:both;"></div>
       <ul id="history">
 
       </ul>
