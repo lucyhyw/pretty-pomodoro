@@ -2,7 +2,7 @@
   <head>
     <title>Pretty Pomodoro</title>
     <script src="https://use.fontawesome.com/acb5e33ee8.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
@@ -75,12 +75,23 @@
         <a href="#" title="Edit"><i id="edit" class="fa fa-pencil"></i></a>
         <!-- autopilot -->
         <!-- history -->
-        <!-- help -->
+        <label for="help-box"><i id="help" class="fa fa-question"></i></label>
       </div>
       <div style="clear:both;"></div>
       <ul id="history">
 
       </ul>
+      <input type="checkbox" id="help-box"></input>
+      <div id="help-overlay" class="overlay">
+        <label for="help-box"><i class="fa fa-times"></i></label>
+        <div id="help-container">
+          Pretty Pomodoro is a minimalist Pomodoro timer with editable time intervals, a full screen mode, and desktop notifications. Read more about the <a href="http://pomodorotechnique.com/">Pomodoro technique</a>.
+          <br/>
+          <br/>
+          Find Pretty Pomodoro on <a href="https://github.com/lucyhyw/pretty-pomodoro">Github</a>.
+
+        </div>
+      </div>
       <div id="footer">
         Made by <a target="_blank" href="https://lucyhyw.github.io/">Lucy Wei</a>, powered by <a target="_blank" href="https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"><i class="fa fa-pied-piper"></i></a>
       </div>
