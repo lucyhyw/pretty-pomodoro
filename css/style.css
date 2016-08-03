@@ -2,7 +2,7 @@ html, body {
   overflow-x: hidden;
 }
 body {
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: 400;
   color: #aaa;
   font-size: 1.5em;
@@ -65,7 +65,7 @@ a:hover, #controls a:hover, #options a:hover, #options label:hover {
   }
 #timer {
   color: #000;
-  font-family: Rozha One;
+  font-family: Rozha One, serif;
   background: #fff;
   mix-blend-mode: lighten;
   font-weight: 400;
@@ -130,7 +130,7 @@ a:hover, #controls a:hover, #options a:hover, #options label:hover {
   width: 40px;
   text-align: center;
   margin: 0 auto;
-  font-family: Open Sans;
+  font-family: Source Sans Pro, sans-serif;
   color: #888;
 }
 
