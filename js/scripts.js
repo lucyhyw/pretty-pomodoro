@@ -233,6 +233,15 @@ doneButton.addEventListener('click', function() {
   var p = parseInt(pomodoroEdit.value, 10)
   var s = parseInt(shortBreakEdit.value, 10)
   var l = parseInt(longBreakEdit.value, 10)
+  if (isNaN(p)) {
+    p = 25
+  }
+  if (isNaN(s)) {
+    s = 5
+  }
+  if (isNaN(l)) {
+    l = 15
+  }
   pomodoro = p
   document.getElementById('pomodoro-time').innerHTML = pomodoro + " min"
   shortBreak = s
