@@ -89,7 +89,11 @@ function initializeTimer(min) {
           sound.play()
         }
       }
-    var newHeight = (newTimeLeft / startTimeLeft) *5.2
+    var newHeight = (newTimeLeft / startTimeLeft) * 5.2
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    if (windowWidth < 580) {
+      newHeight = (newTimeLeft / startTimeLeft) * 3
+    }
     // console.log(newTimeLeft / startTimeLeft)
     // plain js
     // var bg = document.getElementById('timer-bg').style.height = newHeight + "em"

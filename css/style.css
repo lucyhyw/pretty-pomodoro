@@ -1,5 +1,5 @@
-html {
-  overflow: hidden;
+html, body {
+  overflow-x: hidden;
 }
 body {
   font-family: Source Sans Pro;
@@ -8,6 +8,14 @@ body {
   font-size: 1.5em;
   margin: 0;
   background: #fff;
+}
+::selection {
+  color: white;
+  background: #E66767;
+}
+::-moz-selection {
+  color: white;
+  background: #E66767;
 }
 a, label {
   color: #ccc;
@@ -65,13 +73,24 @@ a:hover, #controls a:hover, #options a:hover, #options label:hover {
   height: 200px;
   text-align:center;
   position:relative;
+  padding: 0 5%;
 }
+  @media (max-width: 580px) {
+    #timer-bg {
+      top: 36px;
+      height: 3em;
+    }
+    #timer {
+      font-size: 4em;
+    }
+  }
 #timer div {
   display: inline;
 }
 
 #controls {
   display:inline-block;
+  padding-top: 20px;
 }
 
 #controls #pause, #timers a.button .time, .edit-time, #timers a#done, #unmute, #autopilot, #fullscreen-exit, #history, #help-box {
@@ -165,5 +184,6 @@ a:hover, #controls a:hover, #options a:hover, #options label:hover {
 #footer {
   display: inline-block;
   transition: all .3s;
-  font-size:.7em
+  font-size:.8em;
+  padding-bottom:50px;
 }
